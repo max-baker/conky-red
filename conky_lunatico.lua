@@ -16,6 +16,8 @@ require 'cairo'
 --------------------------------------------------------------------------------
 --                                                                    gauge DATA
 wirelessY = 485
+max_net_speed = 100
+
 gauge = {
 {
     name='cpu',                    arg='cpu0',                  max_value=100,
@@ -102,7 +104,7 @@ gauge = {
     caption_fg_colour=0xFFFFFF,    caption_fg_alpha=0.5,
 },
 {
-    name='downspeedf',           arg='enp0s25',                     max_value=100,
+    name='downspeedf',           arg='enp0s25',                     max_value=max_net_speed,
     x=40,                          y=wirelessY,
     graph_radius=24,
     graph_thickness=5,
@@ -123,7 +125,7 @@ gauge = {
     caption_fg_colour=0xFFFFFF,    caption_fg_alpha=0.5,
 },
 {
-    name='upspeedf',           arg='enp0s25',                     max_value=100,
+    name='upspeedf',           arg='enp0s25',                     max_value=max_net_speed,
     x=40,                          y=wirelessY,
     graph_radius=18,
     graph_thickness=5,
@@ -144,7 +146,7 @@ gauge = {
     caption_fg_colour=0xFFFFFF,    caption_fg_alpha=0.5,
 },
 {
-    name='downspeedf',           arg='wlp3s0',                     max_value=100,
+    name='downspeedf',           arg='wlp3s0',                     max_value=max_net_speed,
     x=135,                          y=wirelessY,
     graph_radius=24,
     graph_thickness=5,
@@ -165,7 +167,7 @@ gauge = {
     caption_fg_colour=0xFFFFFF,    caption_fg_alpha=0.5,
 },
 {
-    name='upspeedf',           arg='wlp3s0',                     max_value=100,
+    name='upspeedf',           arg='wlp3s0',                     max_value=max_net_speed,
     x=135,                          y=wirelessY,
     graph_radius=18,
     graph_thickness=5,

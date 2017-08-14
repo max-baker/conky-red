@@ -86,7 +86,7 @@ ${offset 55}${font Ubuntu:bold:size=7}${color}Used: ${fs_used /}
 ${offset 55}${font Ubuntu:bold:size=7}${color}Usage: ${diskio}
 
 ${voffset 24}
-${offset 45}${font Ubuntu:bold:size=8}${color}Battery: ${battery_percent}%
+${offset 45}${font Ubuntu:bold:size=8}${color}Battery
 ${offset 55}${font Ubuntu:bold:size=7}${color4}${battery_time}
 ${voffset 0}
 
@@ -97,11 +97,13 @@ ${offset 10}${color2}${addr enp0s25}                             ${addr wlp3s0}
 #${offset 10}${color}Down: $color2${downspeed enp0s25} ${alignr}${color}Down: $color2${downspeed wlp3s0}
 
 ${color4}${hr 1}
+${voffset -15}
 
 ${color1}${font Ubuntu:bold:size=8}CPU 1: ${color4}${hwmon 3 temp 1}${color1} °C
 ${font Ubuntu:bold:size=8}CPU 2: ${color4}${hwmon 3 temp 2}${color1} °C
-
 ${color4}${hr 1}
+${voffset -35}
+
 ${if_running spotify} 
 ${color1}${font Ubuntu:bold:size=7}Spotify - Now Playing:
 ${alignr}${color1}${font Ubuntu:bold:size=10}${texeci 1 ~/.conky/spotify-song.sh}
@@ -112,6 +114,7 @@ ${endif}
 
 ${voffset -50}
 ${color4}${hr 1}
+${voffset -30}
 
 ${color1}${font Ubuntu:bold:size=8}RSS:
 ${color1}${font Ubuntu:bold:size=6}${alignr}${texeci 1 ~/.conky/rss-parse.sh}
