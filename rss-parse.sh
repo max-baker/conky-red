@@ -17,7 +17,7 @@
 
 #RSS Setup
 URI=slatestarcodex.com/feed/ #URI of RSS Feed
-LINES=6 #Number of headlines
+LINES=12 #Number of headlines
 
 #Environment Setup
 EXEC="/usr/bin/curl -s" #Path to curl
@@ -30,5 +30,5 @@ sed -e 's/\(.*\)/ \1/' |\
 sed -e 's/\.//' |\
 sed -e 's/\"//' |\
 sed -e 's/\"//' |\
-head -n $(($LINES + 2)) |\
+head -n $(($LINES + 1)) |\
 tail -n $(($LINES))

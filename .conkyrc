@@ -17,6 +17,9 @@ cpu_avg_samples 2
 net_avg_samples 2
 temperature_unit celsius
 
+default_graph_height 50
+default_graph_width 500
+
 double_buffer yes
 no_buffers yes
 text_buffer_size 2048
@@ -69,6 +72,11 @@ ${offset 55}${font Ubuntu:bold:size=7}${color2}${top name 3}${alignr}${top cpu 3
 ${offset 55}${font Ubuntu:bold:size=7}${color3}${top name 4}${alignr}${top cpu 4}%
 ${offset 55}${font Ubuntu:bold:size=7}${color4}${running_threads}     Threads
 
+${voffset 30}
+
+${offset 45}${font Ubuntu:bold:size=7}${color}CPU-temp
+
+
 ${voffset 25}
 ${offset 68}${memgraph 20,110 666666 ff0000}${voffset -15}
 ${offset 45}${font Ubuntu:bold:size=7}${color}MEM
@@ -78,14 +86,14 @@ ${offset 55}${font Ubuntu:bold:size=7}${color2}${top_mem name 3}${alignr}${top_m
 ${offset 55}${font Ubuntu:bold:size=7}${color3}${top_mem name 4}${alignr}${top_mem mem 4}%
 ${offset 55}${font Ubuntu:bold:size=7}${color3}${top_mem name 4}${alignr}${top_mem mem 5}%
 
-${voffset 25}
+${voffset 20}
 ${offset 68}${diskiograph 20,110 666666 ff0000}${voffset -15}
 ${offset 45}${font Ubuntu:bold:size=7}${color}DISK
 #${offset 55}${diskiograph 20,150 666666 666666}${voffset -30}
 ${offset 55}${font Ubuntu:bold:size=7}${color}Used: ${fs_used /}
 ${offset 55}${font Ubuntu:bold:size=7}${color}Usage: ${diskio}
 
-${voffset 24}
+${voffset 35}
 ${offset 45}${font Ubuntu:bold:size=8}${color}Battery
 ${offset 55}${font Ubuntu:bold:size=7}${color4}${battery_time}
 ${voffset 0}
@@ -96,13 +104,9 @@ ${offset 10}${color2}${addr enp0s25}                             ${addr wlp3s0}
 #${offset 10}${color}Up: $color2${upspeed enp0s25} ${alignr}${color}Down: $color2${downspeed wlp3s0}
 #${offset 10}${color}Down: $color2${downspeed enp0s25} ${alignr}${color}Down: $color2${downspeed wlp3s0}
 
-${color4}${hr 1}
-${voffset -15}
 
-${color1}${font Ubuntu:bold:size=8}CPU 1: ${color4}${hwmon 3 temp 1}${color1} °C
-${font Ubuntu:bold:size=8}CPU 2: ${color4}${hwmon 3 temp 2}${color1} °C
 ${color4}${hr 1}
-${voffset -35}
+${voffset -25}
 
 ${if_running spotify} 
 ${color1}${font Ubuntu:bold:size=7}Spotify - Now Playing:
@@ -117,4 +121,4 @@ ${color4}${hr 1}
 ${voffset -30}
 
 ${color1}${font Ubuntu:bold:size=8}RSS:
-${color1}${font Ubuntu:bold:size=6}${alignr}${texeci 1 ~/.conky/rss-parse.sh}
+${color1}${font Ubuntu:bold:size=6}${texeci 1 ~/.conky/rss-parse.sh}
