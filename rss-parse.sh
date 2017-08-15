@@ -16,8 +16,8 @@
 # ${execi 300 /home/youruser/scripts/conky-rss.sh}
 
 #RSS Setup
-URI=slatestarcodex.com/feed/ #URI of RSS Feed
-LINES=12 #Number of headlines
+URI=$1 #URI of RSS Feed
+LINES=1 #Number of headlines
 
 #Environment Setup
 EXEC="/usr/bin/curl -s" #Path to curl
@@ -30,5 +30,7 @@ sed -e 's/\(.*\)/ \1/' |\
 sed -e 's/\.//' |\
 sed -e 's/\"//' |\
 sed -e 's/\"//' |\
+sed -e 's/\#038//'|\
+sed -e 's/(No Comments)//'|\
 head -n $(($LINES + 1)) |\
 tail -n $(($LINES))

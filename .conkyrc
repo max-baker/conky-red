@@ -25,7 +25,7 @@ no_buffers yes
 text_buffer_size 2048
 
 gap_x 10
-gap_y 0
+gap_y 7
 minimum_size 200 500
 maximum_width 200
 own_window yes
@@ -96,6 +96,7 @@ ${offset 55}${font Ubuntu:bold:size=7}${color}Usage: ${diskio}
 ${voffset 35}
 ${offset 45}${font Ubuntu:bold:size=8}${color}Battery
 ${offset 55}${font Ubuntu:bold:size=7}${color4}${battery_time}
+
 ${voffset 0}
 
 ${voffset 68}
@@ -113,12 +114,18 @@ ${color1}${font Ubuntu:bold:size=7}Spotify - Now Playing:
 ${alignr}${color1}${font Ubuntu:bold:size=10}${texeci 1 ~/.conky/spotify-song.sh}
 ${alignr}${color4}${font Ubuntu:bold:size=10}${texeci 1 ~/.conky/spotify-artist.sh}
 ${alignr}${color1}${font Ubuntu:bold:size=10}${texeci 1 ~/.conky/spotify-album.sh}
+${voffset -10}
+${color4}${hr 1}
+${voffset -100}
+
+${else}
+${voffset -70}
 
 ${endif}
 
-${voffset -50}
-${color4}${hr 1}
-${voffset -30}
+
+
 
 ${color1}${font Ubuntu:bold:size=8}RSS:
-${color1}${font Ubuntu:bold:size=6}${texeci 1 ~/.conky/rss-parse.sh}
+${color1}${font Ubuntu:bold:size=6}- SSC: ${texeci 1 ~/.conky/rss-parse.sh slatestarcodex.com/feed/}
+${color1}${font Ubuntu:bold:size=6}- Akimbo: ${texeci 1 ~/.conky/rss-parse.sh http://www.akimbocomics.com/?feed=rss2}
