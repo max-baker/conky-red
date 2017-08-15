@@ -17,7 +17,7 @@
 
 #RSS Setup
 URI=$1 #URI of RSS Feed
-LINES=1 #Number of headlines
+LINES=$2 #Number of headlines
 
 #Environment Setup
 EXEC="/usr/bin/curl -s" #Path to curl
@@ -33,4 +33,4 @@ sed -e 's/\"//' |\
 sed -e 's/\#038//'|\
 sed -e 's/(No Comments)//'|\
 head -n $(($LINES + 1)) |\
-tail -n $(($LINES))
+tail -n $((1))

@@ -126,6 +126,9 @@ ${endif}
 
 
 
+
 ${color1}${font Ubuntu:bold:size=8}RSS:
-${color1}${font Ubuntu:bold:size=6}- SSC: ${texeci 1 ~/.conky/rss-parse.sh slatestarcodex.com/feed/}
-${color1}${font Ubuntu:bold:size=6}- Akimbo: ${texeci 1 ~/.conky/rss-parse.sh http://www.akimbocomics.com/?feed=rss2}
+${color1}${font Ubuntu:bold:size=6}- SSC: ${texeci 1 ~/.conky/rss-parse.sh slatestarcodex.com/feed/ 1}
+${color1}${font Ubuntu:bold:size=6}- Akimbo: ${texeci 1 ~/.conky/rss-parse.sh http://www.akimbocomics.com/?feed=rss2 1}
+${color1}${font Ubuntu:bold:size=6}- Rando: ${texeci 1 ~/.conky/rss-parse.sh https://randowis.com/feed/ 3}
+
