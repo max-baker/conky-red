@@ -15,8 +15,8 @@ require 'cairo'
 
 --------------------------------------------------------------------------------
 --                                                                    gauge DATA
-wirelessY = 565
-tempY=210
+wirelessY = 610
+tempY=220
 
 gauge = {
 {
@@ -84,7 +84,7 @@ gauge = {
 },
 {
     name='fs_used_perc',           arg='/',                     max_value=100,
-    x=40,                          y=405,
+    x=40,                          y=435,
     graph_radius=24,
     graph_thickness=5,
     graph_start_angle=180,
@@ -105,7 +105,7 @@ gauge = {
 },
 {
     name='battery_percent',           arg='',                     max_value=100,
-    x=40,                          y=490,
+    x=40,                          y=530,
     graph_radius=24,
     graph_thickness=5,
     graph_start_angle=180,

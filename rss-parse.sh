@@ -32,5 +32,6 @@ sed -e 's/\"//' |\
 sed -e 's/\"//' |\
 sed -e 's/\#038//'|\
 sed -e 's/(No Comments)//'|\
+sed -e 's/News\&#8211/News/'|\
 head -n $(($LINES + 1)) |\
 tail -n $((1))

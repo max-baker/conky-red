@@ -58,65 +58,70 @@ lua_draw_hook_post main
 
 
 TEXT
-${font Ubuntu:bold:size=7}${color4}CONTROL ${hr 1}
-${offset 10}${font Ubuntu:bold:size=7}${color1}$sysname $kernel
-${offset 10}${font Ubuntu:bold:size=7}${color1}$nodename
-${offset 10}${font Ubuntu:bold:size=7}${color1}Uptime: $uptime
+${font Waree:bold:size=7}${color4}CONTROL ${hr 1}
+${offset 10}${font Waree:bold:size=7}${color1}$sysname $kernel
+${voffset -20}
+${offset 10}${font Waree:bold:size=7}${color1}$nodename
+${voffset -20}
+${offset 10}${font Waree:bold:size=7}${color1}Uptime: $uptime
 
-${voffset 16}
+${voffset -18}
 ${offset 68}${cpugraph 20,110 666666 ff0000}${voffset -15}
-${offset 45}${font Ubuntu:bold:size=7}${color}CPU
-${offset 55}${font Ubuntu:bold:size=7}${color4}${top name 1}${alignr}${top cpu 1}%
-${offset 55}${font Ubuntu:bold:size=7}${color1}${top name 2}${alignr}${top cpu 2}%
-${offset 55}${font Ubuntu:bold:size=7}${color2}${top name 3}${alignr}${top cpu 3}%
-${offset 55}${font Ubuntu:bold:size=7}${color3}${top name 4}${alignr}${top cpu 4}%
-${offset 55}${font Ubuntu:bold:size=7}${color4}${running_threads}     Threads
+${offset 45}${font Waree:bold:size=7}${color}CPU
+${offset 55}${font Waree:bold:size=7}${color4}${top name 1}${alignr}${top cpu 1}%
+${offset 55}${font Waree:bold:size=7}${color1}${top name 2}${alignr}${top cpu 2}%
+${offset 55}${font Waree:bold:size=7}${color2}${top name 3}${alignr}${top cpu 3}%
+${offset 55}${font Waree:bold:size=7}${color3}${top name 4}${alignr}${top cpu 4}%
+${offset 55}${font Waree:bold:size=7}${color4}${running_threads}     Threads
 
-${voffset 30}
+${voffset -15}
 
-${offset 45}${font Ubuntu:bold:size=7}${color}CPU-temp
+${offset 45}${font Waree:bold:size=7}${color}CPU-temp
 
 
-${voffset 25}
+${voffset -15}
 ${offset 68}${memgraph 20,110 666666 ff0000}${voffset -15}
-${offset 45}${font Ubuntu:bold:size=7}${color}MEM
-${offset 55}${font Ubuntu:bold:size=7}${color4}${top_mem name 1}${alignr}${top_mem mem 1}%
-${offset 55}${font Ubuntu:bold:size=7}${color1}${top_mem name 2}${alignr}${top_mem mem 2}%
-${offset 55}${font Ubuntu:bold:size=7}${color2}${top_mem name 3}${alignr}${top_mem mem 3}%
-${offset 55}${font Ubuntu:bold:size=7}${color3}${top_mem name 4}${alignr}${top_mem mem 4}%
-${offset 55}${font Ubuntu:bold:size=7}${color3}${top_mem name 4}${alignr}${top_mem mem 5}%
+${offset 45}${font Waree:bold:size=7}${color}MEM
+${offset 55}${font Waree:bold:size=7}${color4}${top_mem name 1}${alignr}${top_mem mem 1}%
+${offset 55}${font Waree:bold:size=7}${color1}${top_mem name 2}${alignr}${top_mem mem 2}%
+${offset 55}${font Waree:bold:size=7}${color2}${top_mem name 3}${alignr}${top_mem mem 3}%
+${offset 55}${font Waree:bold:size=7}${color3}${top_mem name 4}${alignr}${top_mem mem 4}%
+${offset 55}${font Waree:bold:size=7}${color3}${top_mem name 4}${alignr}${top_mem mem 5}%
 
-${voffset 20}
+${voffset -2}
 ${offset 68}${diskiograph 20,110 666666 ff0000}${voffset -15}
-${offset 45}${font Ubuntu:bold:size=7}${color}DISK
+${offset 45}${font Waree:bold:size=7}${color}DISK
 #${offset 55}${diskiograph 20,150 666666 666666}${voffset -30}
-${offset 55}${font Ubuntu:bold:size=7}${color}Used: ${fs_used /}
-${offset 55}${font Ubuntu:bold:size=7}${color}Usage: ${diskio}
+${offset 55}${font Waree:bold:size=7}${color}Used: ${fs_used /}
+${offset 55}${font Waree:bold:size=7}${color}Usage: ${diskio}
 
-${voffset 35}
-${offset 45}${font Ubuntu:bold:size=8}${color}Battery
-${offset 55}${font Ubuntu:bold:size=7}${color4}${battery_time}
+${voffset 10}
+${offset 45}${font Waree:bold:size=8}${color}Battery
+${voffset -25}
+${offset 55}${font Waree:bold:size=7}${color4}${battery_time}
 
 ${voffset 0}
 
-${voffset 68}
-${offset 10}${font Ubuntu:bold:size=7}${color}ETHERNET                              WIRELESS
-${offset 10}${color2}${addr enp0s25}                             ${addr wlp3s0}
+${voffset 30}
+${offset 10}${font Waree:bold:size=7}${color}ETHERNET                WIRELESS
+${offset 10}${color2}${addr enp0s25}            ${addr wlp3s0}
 #${offset 10}${color}Up: $color2${upspeed enp0s25} ${alignr}${color}Down: $color2${downspeed wlp3s0}
 #${offset 10}${color}Down: $color2${downspeed enp0s25} ${alignr}${color}Down: $color2${downspeed wlp3s0}
 
-
+${voffset -30}
 ${color4}${hr 1}
-${voffset -25}
+${voffset -55}
 
 ${if_running spotify} 
-${color1}${font Ubuntu:bold:size=7}Spotify - Now Playing:
-${alignr}${color1}${font Ubuntu:bold:size=10}${texeci 1 ~/.conky/spotify-song.sh}
-${alignr}${color4}${font Ubuntu:bold:size=10}${texeci 1 ~/.conky/spotify-artist.sh}
-${alignr}${color1}${font Ubuntu:bold:size=10}${texeci 1 ~/.conky/spotify-album.sh}
-${voffset -10}
+${color1}${font Waree:bold:size=5}Spotify - Now Playing:
+${alignr}${color1}${font Waree:bold:size=8}${texeci 1 ~/.conky/spotify-song.sh}
+${voffset -25}
+${alignr}${color4}${font Waree:bold:size=8}${texeci 1 ~/.conky/spotify-artist.sh}
+${voffset -25}
+${alignr}${color1}${font Waree:bold:size=8}${texeci 1 ~/.conky/spotify-album.sh}
+${voffset -20}
 ${color4}${hr 1}
-${voffset -100}
+${voffset -165}
 
 ${else}
 ${voffset -70}
@@ -127,8 +132,9 @@ ${endif}
 
 
 
-${color1}${font Ubuntu:bold:size=8}RSS:
-${color1}${font Ubuntu:bold:size=6}- SSC: ${texeci 1 ~/.conky/rss-parse.sh slatestarcodex.com/feed/ 1}
-${color1}${font Ubuntu:bold:size=6}- Akimbo: ${texeci 1 ~/.conky/rss-parse.sh http://www.akimbocomics.com/?feed=rss2 1}
-${color1}${font Ubuntu:bold:size=6}- Rando: ${texeci 1 ~/.conky/rss-parse.sh https://randowis.com/feed/ 3}
+${color1}${font Waree:bold:size=8}RSS:
+${color1}${font Waree:bold:size=6}- SSC: ${texeci 10 ~/.conky/rss-parse.sh slatestarcodex.com/feed/ 1}
+${color1}${font Waree:bold:size=6}- Akimbo: ${texeci 10000 ~/.conky/rss-parse.sh http://www.akimbocomics.com/?feed=rss2 1}
+${color1}${font Waree:bold:size=6}- Rando: ${texeci 100 ~/.conky/rss-parse.sh https://randowis.com/feed/ 3}
+${color1}${font Waree:bold:size=6}- Mint: ${texeci 100 ~/.conky/rss-parse.sh http://blog.linuxmint.com/?feed=rss2 1}
 
