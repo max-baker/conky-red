@@ -65,8 +65,8 @@ ${offset 10}${font Waree:bold:size=7}${color1}$nodename
 ${voffset -20}
 ${offset 10}${font Waree:bold:size=7}${color1}Uptime: $uptime
 
-${voffset -18}
-${offset 68}${cpugraph 20,110 666666 ff0000}${voffset -15}
+${voffset -12}
+${offset 75}${cpugraph 20,110 666666 ff0000}${voffset -21}
 ${offset 45}${font Waree:bold:size=7}${color}CPU
 ${offset 55}${font Waree:bold:size=7}${color4}${top name 1}${alignr}${top cpu 1}%
 ${offset 55}${font Waree:bold:size=7}${color1}${top name 2}${alignr}${top cpu 2}%
@@ -79,8 +79,8 @@ ${voffset -15}
 ${offset 45}${font Waree:bold:size=7}${color}CPU-temp
 
 
-${voffset -15}
-${offset 68}${memgraph 20,110 666666 ff0000}${voffset -15}
+${voffset -9}
+${offset 75}${memgraph 20,110 666666 ff0000}${voffset -21}
 ${offset 45}${font Waree:bold:size=7}${color}MEM
 ${offset 55}${font Waree:bold:size=7}${color4}${top_mem name 1}${alignr}${top_mem mem 1}%
 ${offset 55}${font Waree:bold:size=7}${color1}${top_mem name 2}${alignr}${top_mem mem 2}%
@@ -88,8 +88,8 @@ ${offset 55}${font Waree:bold:size=7}${color2}${top_mem name 3}${alignr}${top_me
 ${offset 55}${font Waree:bold:size=7}${color3}${top_mem name 4}${alignr}${top_mem mem 4}%
 ${offset 55}${font Waree:bold:size=7}${color3}${top_mem name 4}${alignr}${top_mem mem 5}%
 
-${voffset -2}
-${offset 68}${diskiograph 20,110 666666 ff0000}${voffset -15}
+${voffset 4}
+${offset 75}${diskiograph 20,110 666666 ff0000}${voffset -21}
 ${offset 45}${font Waree:bold:size=7}${color}DISK
 #${offset 55}${diskiograph 20,150 666666 666666}${voffset -30}
 ${offset 55}${font Waree:bold:size=7}${color}Used: ${fs_used /}
